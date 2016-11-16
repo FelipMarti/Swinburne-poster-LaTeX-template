@@ -2,7 +2,7 @@
 
 
 ## Info
-Swinburne University of Technology (SUT) unofficial poster conference template in LaTeX (using TikZ).
+[Swinburne University of Technology](http://www.swinburne.edu.au/) (SUT) unofficial poster conference template in LaTeX (using TikZ) (there is no official version).
 
 I've costumised the basic TikZ poster template using the SUT official colors. 
 
