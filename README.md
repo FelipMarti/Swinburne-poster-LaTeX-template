@@ -1,4 +1,4 @@
-# Swinburne poster LaTeXtemplate
+# Swinburne poster LaTeX template
 
 
 ## Info
