@@ -29,5 +29,6 @@ If not, try any TeX editor:
 
 ## Examples
 ![OzCHI 2016](https://github.com/FelipMarti/Swinburne-poster-LaTeX-template/blob/master/examples/OzCHI2016.pdf)
+
 ![HRI 2017](https://github.com/FelipMarti/Swinburne-poster-LaTeX-template/blob/master/examples/HRI2017.pdf)
 
