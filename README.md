@@ -11,6 +11,7 @@ You can change easily the poster size A0, A1, A2, and the orientation Portrait o
 
 ## Dependencies
 * [TeX Live](https://www.tug.org/texlive/)
+* [Inkscape](https://inkscape.org/) if using .svg vector image format
 
 
 ## How to compile in GNU/Linux or Unix-like

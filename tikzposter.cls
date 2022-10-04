@@ -50,6 +50,7 @@
     \usetikzlibrary{shapes,decorations,shadows,backgrounds,calc,fadings,fit}
     \usetikzlibrary{decorations.pathmorphing}
     \usepgflibrary{arrows}
+\usepackage{svg}
 
  % --------------------------------------- %
  % Paper parameter

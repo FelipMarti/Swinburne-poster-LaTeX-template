@@ -10,7 +10,7 @@ DOC = swinposter-template
 ####
 
 all: $(DOC).tex
-	pdflatex $(DOC).tex
+	pdflatex --shell-escape $(DOC).tex
 
 nice: all
 	$(RM) $(DOC).aux $(DOC).log $(DOC).out
