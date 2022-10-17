@@ -33,3 +33,5 @@ If not, try any TeX editor:
 
 ![HRI 2017](https://github.com/FelipMarti/Swinburne-poster-LaTeX-template/blob/master/examples/HRI2017.pdf)
 
+![MobiCom 2022](https://github.com/FelipMarti/Swinburne-poster-LaTeX-template/blob/master/examples/MobiCom2022.pdf)
+

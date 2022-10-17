@@ -1,0 +1,187 @@
+%%
+%% This is file `tikzposter-template.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% tikzposter.dtx  (with options: `tikzposter-template.tex')
+%% 
+%% This is a generated file.
+%% 
+%% Copyright (C) 2014 by Pascal Richter, Elena Botoeva, Richard Barnard, and Dirk Surmann
+%% 
+%% This file may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either
+%% version 2.0 of this license or (at your option) any later
+%% version. The latest version of this license is in:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% and version 2.0 or later is part of all distributions of
+%% LaTeX version 2013/12/01 or later.
+%% 
+%% 
+%% 
+%% Copyright (C) 2016 by Felip Marti Carrillo - fmarti@swin.edu.au
+%%
+%% This Swinburne version of the poster template may be distributed  
+%% and/or modified under the conditions described above 
+%% 
+
+\documentclass[a0paper, portrait]{tikzposter}
+%%	Options for format can be included here
+%%	a0paper, a1paper, a2paper
+%%	portrait, landscape
+%%	Check the documentation for more options
+
+ % Title, Author, Institute
+\title{\parbox{\linewidth}{\centering Mobile IoT-RoadBot: An AI-powered Mobile IoT Solution for Real-Time Roadside Asset Management}}
+
+\author{Abdur Rahim Mohammad Forkan, Yong-Bin Kang, Felip Mart\'{i}, Shane Joachim, Abhik Banerjee, Josip Karabotic Milovac, Prem Prakash Jayaraman, Chris McCarthy, Hadi Ghaderi, Dimitrios Georgakopoulos}
+\institute{Swinburne University of Technology, Melbourne, Australia}
+
+ %Choose Layout
+\usetheme{Swinburne}
+
+
+% REDEFINING TITLE
+\makeatletter
+\renewcommand\TP@maketitle{%
+   \centering
+   \begin{minipage}[b]{0.8\linewidth}
+        \centering
+        \color{titlefgcolor}
+        {\bfseries \Huge \@title \par}
+        \vspace*{1em}
+        {\Large \sl \@author \par}
+        \vspace*{1em}
+        {\Large \@institute}
+    \end{minipage}%
+      \tikz[remember picture,overlay]\node[scale=0.67,anchor=east,xshift=0.59\linewidth,yshift=6.5cm,inner sep=0pt] {%
+        \includegraphics[width=10cm]{figures/SwinLogoV}
+    %  \tikz[remember picture,overlay]\node[scale=0.8,anchor=east,xshift=0.5\linewidth,yshift=3cm,inner sep=0pt] {%
+    %    \includegraphics[width=18cm]{figures/SwinLogoH}
+   %    \@titlegraphic
+    };
+}
+\makeatother
+% END REDEFINING TITLE
+
+
+\begin{document}
+
+ % Title block with title, author, logo, etc.
+\maketitle
+
+\begin{columns}
+
+ % FIRST column
+ \column{0.38}% Width set relative to text width
+ \block{Motivations}{
+ \begin{itemize}
+     \item Timely detection of roadside assets (e.g., damaged road signs, rubbish dumped on the roadside) that require maintenance is essential for improving citizen satisfaction and appearance of local government areas (LGAs).
+     \item The current process of identifying such maintenance issues is typically performed manually (e.g., citizens reporting issues), which is time consuming, expensive, and slow to respond.
+     \item Requests received via crowd-sourced reports are often unclear and inaccurate.
+     \item The manual approach is not feasible in larger areas as it only covers very small geographical areas and is reliant on the number of citizens participating, making it unscalable and impractical.
+ \end{itemize}
+ }
+
+
+ % SECOND column
+ \column{0.62}% Width set relative to text width
+ \block{Contributions}{
+     We present Mobile IoT-RoadBot, a mobile 5G-based Internet of Things (IoT) solution, powered by Artificial Intelligence (AI) techniques to enable opportunistic real-time identification and detection of maintenance issues with roadside assets. 
+    \begin{itemize}
+        \item The first research solution that combines advanced technologies such as IoT, 5G, and AI to automate PoMs management in real-time in a real-world setting.
+        \item Mobile IoT-RoadBot~comprises of IoT devices, stereo-vision cameras, 5G routers, and GNSS sensors
+        \item The solution is deployed on 11 waste collection service trucks in the western suburbs of Melbourne, Australia.
+        \item Mobile IoT-RoadBot~transmits captured data by waste collection service trucks via 5G to the cloud for processing, and uses Deep Learning models to automatically monitor and detect roadside asset maintenance issues
+        \item We developed a  map-based dashboard to present Points of Maintenance (PoMs) map (along with a short video clip for verification).
+    \end{itemize}
+ }
+ \end{columns}
+ 
+ \block{The overview of our developed Mobile IoT-RoadBot solution}{
+  \begin{tikzfigure}
+    \includegraphics[width=1\linewidth]{figures/arch_and_iot.eps}
+  \end{tikzfigure} 
+ }
+   \note[targetoffsetx=22cm, targetoffsety=19cm, angle=0, rotate=-4, width=12cm]
+ {\textbf{The solution has been deployed and in operation since June 2022!}}
+ 
+ 
+ \begin{columns}
+
+ \column{0.33}% Width set relative to text width
+ \block{Identified Points of Maintenance}{
+  \begin{tikzfigure}
+    \includegraphics[width=0.95\linewidth]{figures/detections1.eps}
+  \end{tikzfigure} 
+ }
+  \note[targetoffsetx=-5.5cm, targetoffsety=-9.5cm, angle=0, rotate=0, width=13cm]
+ {\textbf{AI models producing $\sim$88\% accuracy in automatically detecting roadside asset issues.}}
+
+ \column{0.33}% Width set relative to text width
+ \block{GNSS coverage by trucks}{
+      \begin{tikzfigure}
+    \includegraphics[angle=90,
+    trim=160 160 225 100, clip,width=0.95\linewidth]{figures/gnss_routes.eps}
+  \end{tikzfigure} 
+ }
+ \note[targetoffsetx=-15cm, targetoffsety=7cm, angle=0, rotate=10, width=11cm]
+ {\textbf{95\% of entire Brimbank area covered with 11 trucks in 2 weeks!}}
+ 
+ 
+ \column{0.33}% Width set relative to text width
+ \block{Points of Maintenance dashboard}{
+  \begin{tikzfigure}
+    \includegraphics[trim=0 0 40 0, clip,width=1\linewidth]{figures/pom1.eps}
+  \end{tikzfigure} 
+ }
+  \note[targetoffsetx=-9.5cm, targetoffsety=-8cm, angle=0, rotate=-10, width=11cm]
+ {\textbf{Reporting exact PoMs location and video-based evidence!}}
+ 
+ \end{columns}
+ 
+ \begin{columns}
+
+ % FIRST column
+ \column{0.65}% Width set relative to text width
+ \block{Outcomes}{
+\begin{itemize}
+    \item An innovative first of its kind mobile 5G-based IoT solution deployed on bin service trucks and uses Deep Learning models to automatically detect and report issues with road assets in LGAs.
+    \item The solution uses Nerian's Stereo-vision camera, Sierra Wireless's 5G router, Optus's 5G antenna and Amazon Web Service (AWS) as a backbone for developing the cloud-based pipeline.
+    \item Each truck streams approximately 5GB data/ day with an average of 2.5 MBps (max: 4.24MBps) transmission rate.
+    \item The PoMs Analytics Layer processes around 35,000 frames/day on average and can detect damaged road signs (e.g., bent, cracked), dumped rubbish on the street, and graffiti on bus shelters.
+\end{itemize}
+ 
+    
+ }
+
+
+ % SECOND column
+ \column{0.35}% Width set relative to text width
+ \block{Acknowledgements}
+ {
+    \begin{itemize}
+        \item Funding: Australian Government 5G Innovation Initiative
+        \item Thanks to Brimbank City Council, AWS, and Optus
+    \end{itemize}
+\centering
+\begin{tabular}{p{0.05\linewidth}cp{0.05\linewidth}cp{0.05\linewidth}cp{0.05\linewidth}}
+ & \begin{tabular}[c]{@{}l@{}}\includesvg[width=0.18\linewidth]{figures/logo002.svg}\end{tabular} &  & \begin{tabular}[c]{@{}l@{}}\includesvg[width=0.2\linewidth]{figures/logo005.svg}\end{tabular} &  
+ & \begin{tabular}[c]{@{}l@{}}\includesvg[width=0.25\linewidth]{figures/logo004.svg}\end{tabular} &  
+\end{tabular}
+
+ }
+ \end{columns}
+ 
+ 
+\end{document}
+
+
+
+\endinput
+%%
+%% End of file `tikzposter-template.tex'.
+
